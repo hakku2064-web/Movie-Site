@@ -1,22 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import moviedetail from '../../data/moviedetail'
-function MovieCard() {
+
+function MovieCard({movie}) {
   return (
-    <div>
-        {moviedetail.map((movies)=>(
-        <div key={movies.id} className='movie-card'>
-            <div className='movie-image'>
-                <img src={movies.poster} alt={movies.title}/>
+    
+       <Link to={`/movie/${movie.id}`} className='movie-card'>
+        <div className='movie-card'>
+            <img src={movie.poster} alt={movie.title}/>
+            <h3>{movie.title}</h3>
+        </div></Link>
+       
+    
 
-            </div>
-            <div className='movie-info'>
-                <div>{movies.title}</div>
-            </div>
-
-        </div>)
-    )}
-    </div>
   )
 }
 
