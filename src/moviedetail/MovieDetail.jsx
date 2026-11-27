@@ -43,7 +43,9 @@ function MovieDetail() {
            )}
         </div>
         <div className='nav-tab-bar'>
-            <button className={ab==='overview'?'tab active':'tab'}
+            <button className={ab==='overview'?'tab active':'tab'}>
+                
+            </button>
         </div>
 
     </div>
